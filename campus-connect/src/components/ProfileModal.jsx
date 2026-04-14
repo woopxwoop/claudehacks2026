@@ -3,7 +3,6 @@
 
 import { useState } from "react";
 
-const ACCENT = "#5c6ac4";
 const MODEL = "claude-sonnet-4-20250514";
 
 async function draftIntro(me, them) {
@@ -76,7 +75,7 @@ export default function ProfileModal({ student, me, onClose }) {
 
         {matchReason && (
           <div style={s.matchBadge}>
-            <span style={{ color: ACCENT }}>✦</span> {matchReason}
+            <span style={{ color: "var(--uwRed)" }}>✦</span> {matchReason}
           </div>
         )}
 
@@ -132,7 +131,7 @@ const s = {
     display: "flex", alignItems: "center", justifyContent: "center", zIndex: 100, padding: 24,
   },
   modal: {
-    background: "#fff", borderRadius: 18, padding: 32, width: "100%", maxWidth: 460,
+    background: "var(--uwWhite)", borderRadius: 18, padding: 32, width: "100%", maxWidth: 460,
     position: "relative", maxHeight: "90vh", overflowY: "auto",
   },
   close: {
@@ -141,34 +140,34 @@ const s = {
   },
   header: { display: "flex", gap: 14, alignItems: "center", marginBottom: 16 },
   avatar: {
-    width: 56, height: 56, borderRadius: "50%", background: ACCENT,
+    width: 56, height: 56, borderRadius: "50%", background: "var(--uwRed)",
     display: "flex", alignItems: "center", justifyContent: "center",
-    color: "#fff", fontSize: 18, fontWeight: 700, flexShrink: 0,
+    color: "var(--uwWhite)", fontSize: 18, fontWeight: 700, flexShrink: 0,
   },
   name: { margin: 0, fontSize: 20, fontWeight: 700 },
   meta: { margin: "2px 0 0", color: "#888", fontSize: 13 },
   matchBadge: {
-    background: "#f0f0ff", borderRadius: 8, padding: "8px 14px",
-    fontSize: 13, color: "#555", marginBottom: 16, display: "flex", gap: 6, alignItems: "center",
+    background: "var(--uwRedLight)", borderRadius: 8, padding: "8px 14px",
+    fontSize: 13, color: "var(--uwGrayDark)", marginBottom: 16, display: "flex", gap: 6, alignItems: "center",
   },
   bio: { color: "#555", fontSize: 14, lineHeight: 1.6, marginBottom: 20 },
   section: { marginBottom: 18 },
   sectionLabel: { margin: "0 0 8px", fontSize: 12, color: "#999", textTransform: "uppercase", letterSpacing: 0.5 },
   chips: { display: "flex", flexWrap: "wrap", gap: 6 },
-  chip: { padding: "4px 12px", borderRadius: 20, background: "#f4f4f4", fontSize: 13, color: "#555" },
-  chipAccent: { background: "#f0f0ff", color: ACCENT },
-  introBox: { marginTop: 24, borderTop: "0.5px solid #eee", paddingTop: 20 },
+  chip: { padding: "4px 12px", borderRadius: 20, background: "var(--uwGrayLightest)", fontSize: 13, color: "#555" },
+  chipAccent: { background: "var(--uwRedLight)", color: "var(--uwRedDark)" },
+  introBox: { marginTop: 24, borderTop: "0.5px solid var(--uwGrayLight)", paddingTop: 20 },
   draftBtn: {
-    width: "100%", padding: "11px", border: `1.5px solid ${ACCENT}`, borderRadius: 10,
-    background: "#fff", color: ACCENT, fontSize: 14, fontWeight: 600, cursor: "pointer",
+    width: "100%", padding: "11px", border: "1.5px solid var(--uwRed)", borderRadius: 10,
+    background: "var(--uwWhite)", color: "var(--uwRed)", fontSize: 14, fontWeight: 600, cursor: "pointer",
   },
   introText: {
-    width: "100%", padding: "12px", border: "0.5px solid #ddd", borderRadius: 10,
+    width: "100%", padding: "12px", border: "0.5px solid var(--uwGrayLight)", borderRadius: 10,
     fontSize: 14, lineHeight: 1.6, resize: "none", boxSizing: "border-box",
-    background: "#fafafa", marginBottom: 10, outline: "none",
+    background: "var(--uwGrayLightest)", marginBottom: 10, outline: "none",
   },
   copyBtn: {
-    width: "100%", padding: "11px", background: ACCENT, color: "#fff",
+    width: "100%", padding: "11px", background: "var(--uwRed)", color: "var(--uwWhite)",
     border: "none", borderRadius: 10, fontSize: 14, fontWeight: 600, cursor: "pointer",
   },
 };

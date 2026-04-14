@@ -103,26 +103,25 @@ export default function FeedStep({ me, students }) {
   );
 }
 
-const ACCENT = "#5c6ac4";
 
 const s = {
-  page: { minHeight: "100vh", background: "#f8f7f4" },
-  header: { background: "#fff", borderBottom: "0.5px solid #e0e0e0", position: "sticky", top: 0, zIndex: 10 },
+  page: { minHeight: "100vh", background: "var(--uwGrayLightest)" },
+  header: { background: "var(--uwWhite)", borderBottom: "0.5px solid var(--uwGrayLight)", position: "sticky", top: 0, zIndex: 10 },
   headerInner: { maxWidth: 960, margin: "0 auto", padding: "14px 24px", display: "flex", justifyContent: "space-between", alignItems: "center" },
   logoRow: { display: "flex", alignItems: "center", gap: 10 },
-  logo: { width: 32, height: 32, background: ACCENT, borderRadius: 8, display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontSize: 16, fontWeight: 700 },
-  appName: { fontWeight: 700, fontSize: 18 },
-  meChip: { display: "flex", alignItems: "center", gap: 8, background: "#f0f0f0", borderRadius: 20, padding: "6px 14px" },
-  avatar: { width: 28, height: 28, background: ACCENT, borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontSize: 11, fontWeight: 600 },
+  logo: { width: 32, height: 32, background: "var(--uwRed)", borderRadius: 8, display: "flex", alignItems: "center", justifyContent: "center", color: "var(--uwWhite)", fontSize: 16, fontWeight: 700 },
+  appName: { fontWeight: 700, fontSize: 18, color: "var(--uwBlack)" },
+  meChip: { display: "flex", alignItems: "center", gap: 8, background: "var(--uwGrayLight)", borderRadius: 20, padding: "6px 14px" },
+  avatar: { width: 28, height: 28, background: "var(--uwRed)", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", color: "var(--uwWhite)", fontSize: 11, fontWeight: 600 },
   body: { maxWidth: 960, margin: "0 auto", padding: "24px 24px" },
-  filterBar: { display: "flex", flexWrap: "wrap", gap: 8, alignItems: "center", marginBottom: 20, background: "#fff", borderRadius: 12, border: "0.5px solid #e0e0e0", padding: "14px 16px" },
-  filterLabel: { fontSize: 13, color: "#999", marginRight: 4 },
+  filterBar: { display: "flex", flexWrap: "wrap", gap: 8, alignItems: "center", marginBottom: 20, background: "var(--uwWhite)", borderRadius: 12, border: "0.5px solid var(--uwGrayLight)", padding: "14px 16px" },
+  filterLabel: { fontSize: 13, color: "#888", marginRight: 4 },
   filterGroup: { display: "flex", gap: 6, flexWrap: "wrap" },
-  filterChip: { padding: "5px 12px", borderRadius: 20, border: "0.5px solid #ddd", background: "#fff", fontSize: 13, cursor: "pointer", color: "#555" },
-  filterChipActive: { background: ACCENT, borderColor: ACCENT, color: "#fff" },
-  majorInput: { padding: "6px 12px", border: "0.5px solid #ddd", borderRadius: 20, fontSize: 13, outline: "none", background: "#fafafa" },
-  count: { fontSize: 13, color: "#999", marginBottom: 16 },
+  filterChip: { padding: "5px 12px", borderRadius: 20, border: "0.5px solid var(--uwGrayLight)", background: "var(--uwWhite)", fontSize: 13, cursor: "pointer", color: "var(--uwGrayDark)" },
+  filterChipActive: { background: "var(--uwRed)", borderColor: "var(--uwRedDark)", color: "var(--uwWhite)" },
+  majorInput: { padding: "6px 12px", border: "0.5px solid var(--uwGrayLight)", borderRadius: 20, fontSize: 13, outline: "none", background: "var(--uwGrayLightest)" },
+  count: { fontSize: 13, color: "#888", marginBottom: 16 },
   grid: { display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(260px, 1fr))", gap: 16 },
-  empty: { textAlign: "center", padding: "60px 0", color: "#999" },
-  clearBtn: { marginTop: 8, padding: "8px 20px", border: "0.5px solid #ddd", borderRadius: 8, background: "#fff", cursor: "pointer", fontSize: 14 },
+  empty: { textAlign: "center", padding: "60px 0", color: "#888" },
+  clearBtn: { marginTop: 8, padding: "8px 20px", border: "0.5px solid var(--uwGrayLight)", borderRadius: 8, background: "var(--uwWhite)", cursor: "pointer", fontSize: 14 },
 };

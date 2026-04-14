@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./App.css";
 import OnboardingStep from "./components/OnboardingStep";
 import FeedStep from "./components/FeedStep";
 
@@ -58,7 +59,7 @@ export default function App() {
   const [rankedStudents, setRankedStudents] = useState([]);
 
   return (
-    <div style={{ minHeight: "100vh", background: "var(--color-bg, #f8f7f4)", fontFamily: "system-ui, sans-serif" }}>
+    <div style={{ minHeight: "100vh", background: "var(--uwGrayLightest)", fontFamily: "system-ui, sans-serif" }}>
       {step === "onboarding" && (
         <OnboardingStep
           onDone={(profile, ranked) => {

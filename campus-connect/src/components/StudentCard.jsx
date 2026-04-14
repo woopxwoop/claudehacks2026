@@ -1,6 +1,5 @@
 // ── PERSON B OWNS THIS FILE ───────────────────────────────────────────────
 
-const ACCENT = "#5c6ac4";
 
 export default function StudentCard({ student, onClick }) {
   const { name, year, major, interests, lookingFor, matchScore, matchReason, avatar } = student;
@@ -42,27 +41,27 @@ export default function StudentCard({ student, onClick }) {
 
 const s = {
   card: {
-    background: "#fff", borderRadius: 14, border: "0.5px solid #e0e0e0",
+    background: "var(--uwWhite)", borderRadius: 14, border: "0.5px solid var(--uwGrayLight)",
     padding: 20, cursor: "pointer", transition: "box-shadow .15s",
   },
   top: { display: "flex", alignItems: "center", gap: 12, marginBottom: 12 },
   avatar: {
-    width: 44, height: 44, borderRadius: "50%", background: ACCENT,
+    width: 44, height: 44, borderRadius: "50%", background: "var(--uwRed)",
     display: "flex", alignItems: "center", justifyContent: "center",
-    color: "#fff", fontSize: 14, fontWeight: 600, flexShrink: 0,
+    color: "var(--uwWhite)", fontSize: 14, fontWeight: 600, flexShrink: 0,
   },
   info: { flex: 1 },
   name: { margin: 0, fontSize: 15, fontWeight: 600 },
   meta: { margin: "2px 0 0", fontSize: 12, color: "#888" },
   score: {
-    width: 36, height: 36, borderRadius: "50%", background: "#f0f0ff",
+    width: 36, height: 36, borderRadius: "50%", background: "var(--uwRedLight)",
     display: "flex", alignItems: "center", justifyContent: "center",
-    fontSize: 13, fontWeight: 700, color: ACCENT, flexShrink: 0,
+    fontSize: 13, fontWeight: 700, color: "var(--uwRedDark)", flexShrink: 0,
   },
   reason: { fontSize: 13, color: "#555", marginBottom: 12, display: "flex", gap: 6, alignItems: "flex-start", lineHeight: 1.4 },
-  reasonDot: { color: ACCENT, flexShrink: 0, fontSize: 10, marginTop: 2 },
+  reasonDot: { color: "var(--uwRed)", flexShrink: 0, fontSize: 10, marginTop: 2 },
   tags: { display: "flex", gap: 6, flexWrap: "wrap", marginBottom: 10 },
-  tag: { padding: "3px 10px", borderRadius: 20, background: "#f0f0ff", color: ACCENT, fontSize: 11, fontWeight: 500 },
+  tag: { padding: "3px 10px", borderRadius: 20, background: "var(--uwRedLight)", color: "var(--uwRedDark)", fontSize: 11, fontWeight: 500 },
   interests: { display: "flex", gap: 8, flexWrap: "wrap" },
   interest: { fontSize: 12, color: "#999" },
 };

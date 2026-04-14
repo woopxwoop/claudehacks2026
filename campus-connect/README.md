@@ -56,3 +56,5 @@ Person A calls `onDone(myProfile, rankedStudents[])` — that's the only interfa
 7. Copy and done
 
 The match reason blurb ("Both in CS 301 and love startups") is the moment that sells it.
+
+"We're using seeded in-memory data for the demo, but the real architecture is a graph database — students and interests as nodes, shared classes as edges. Claude ranks a pre-filtered shortlist, not the whole campus."
