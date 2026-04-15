@@ -2,6 +2,11 @@
   --uwRed: #c5050c;
   --uwRedDark: #9b0000;
   --uwRedLight: #f4b7b7;
+  --uwSurface: rgba(255, 255, 255, 0.88);
+  --uwSurfaceStrong: #ffffff;
+  --uwSurfaceMuted: rgba(255, 255, 255, 0.64);
+  --uwBorder: rgba(39, 39, 39, 0.08);
+  --uwShadow: 0 18px 60px rgba(29, 24, 21, 0.12);
   --uwGrayDark: #282728;
   --uwGrayLight: #e1e5e7;
   --uwGrayLightest: #f3f3f3;
@@ -13,9 +18,85 @@
   box-sizing: border-box;
 }
 
+html {
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(197, 5, 12, 0.18),
+      transparent 34%
+    ),
+    radial-gradient(
+      circle at top right,
+      rgba(121, 141, 164, 0.18),
+      transparent 30%
+    ),
+    linear-gradient(180deg, #fafafa 0%, #f4f2ef 100%);
+}
+
 body {
   margin: 0;
-  background: var(--uwGrayLightest);
-  font-family: system-ui, sans-serif;
+  min-height: 100vh;
+  background: transparent;
+  color: var(--uwBlack);
+  font-family:
+    Inter,
+    "Segoe UI",
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root,
+.app-shell {
+  min-height: 100vh;
+}
+
+.app-shell {
+  position: relative;
+  isolation: isolate;
+}
+
+.app-shell::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.28), rgba(255, 255, 255, 0.28)),
+    radial-gradient(circle at 20% 10%, rgba(197, 5, 12, 0.12), transparent 22%),
+    radial-gradient(circle at 85% 15%, rgba(28, 68, 142, 0.1), transparent 20%);
+  opacity: 0.9;
+  z-index: -1;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button {
+  transition:
+    transform 160ms ease,
+    box-shadow 160ms ease,
+    border-color 160ms ease,
+    background-color 160ms ease,
+    color 160ms ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+::selection {
+  background: rgba(197, 5, 12, 0.16);
   color: var(--uwBlack);
 }
